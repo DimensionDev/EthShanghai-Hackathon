@@ -1,1 +1,115 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8l67wJ3Wcbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=0" />
+    <title>ETH Shanghai Youtube Live</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/responsive-nav.css" type="text/css" rel="stylesheet" />
+    <script src="js/responsive-nav.min.js"></script>
+    <link href="css/body.css?T=a" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="top">
+        <div class="container clearfix relative">
+            <div class="logo absolute">
+                <a href="https://ethshanghai.org/" target="_blank"><img src="images/logo.png"></a>
+            </div>
+            <nav class="nav-collapse">
+                <ul id="nav">
+                    <li>
+                        <a href="https://discord.gg/n4332P7Dab" target="_blank">Join Discord</a>
+                    </li>
+                    <li>
+                        <a href="https://hackathon.ethshanghai.org#aboutus">About Us</a>
+                    </li>
+                    <li>
+                        <a href="https://ethshanghai.org/">Schedule</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="main">
+        <!--d-none d-sm-block-->
+        <div class="banner back_img text_center relative " style="background-image: url(images/banner.jpg);">
+            <div class="container">
+                <h1 class="bold b_txt1 absolute">ETH Shanghai Web 3.0 Developer Summit<br />WEB3 SOCIAL</h1>
+                <div class="b_txt3 absolute text_left justify_content">
+                    <p class="col-lg-8 col-md-10 topintro b_txt_banner" style="max-width: 600px; padding-left: 30px; padding-right: 30px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8l67wJ3Wcbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <a href="https://youtu.be/8l67wJ3Wcbc" target="_blank">Click here</a> to our YouTube Live.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--<div class="d-sm-none img_maxbfb"><img src="images/wap_banner.jpg"></div>-->
+
+
+        <script>
+            var navigation = responsiveNav(".nav-collapse", {
+                animate: true, // Boolean: Use CSS3 transitions, true or false
+                transition: 600, // Integer: Speed of the transition, in milliseconds
+                customToggle: "", // Selector: Specify the ID of a custom toggle
+                closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
+                openPos: "relative", // String: Position of the opened nav, relative or static
+                navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
+                navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
+                jsClass: "js", // String: 'JS enabled' class which is added to <html> element
+                init: function() {}, // Function: Init callback
+                open: function() {}, // Function: Open callback
+                close: function() {} // Function: Close callback
+            });
+        </script>
+        <!--页面定位-->
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                //设置标杆
+                var _line = parseInt($(window).height() / 100 + 50);
+                $(window).scroll(function() {
+                    //			$('.nav-collapse li').eq(0).addClass('current');
+                    //滚动到标杆位置,左侧导航加current
+                    $('.main .section-wrapper').each(function() {
+                        var _target = parseInt($(this).offset().top - $(window).scrollTop() - _line);
+                        var _i = $(this).index();
+                        console.log(_target, _i)
+                        if (_target <= 0) {
+                            $('.nav-collapse li').removeClass('current');
+                            $('.nav-collapse li').eq(_i).addClass('current');
+                        }
+                        //如果到达页面底部，给左侧导航最后一个加current
+                        else if ($(document).height() == $(window).scrollTop() + $(window).height()) {
+                            $('.nav-collapse li').removeClass('current');
+                            $('.nav-collapse li').eq($('.main .section-wrapper').length - 1).addClass('current');
+                        }
+                    });
+                });
+                $('.nav-collapse li').click(function() {
+                    //$(this).addClass('current').siblings().removeClass('current');
+                    var _i = $(this).index();
+                    $('body, html').animate({
+                        scrollTop: $('.main .section-wrapper').eq(_i).offset().top - _line
+                    }, 500);
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                $('.tip1').hover(function() {
+                    $(this).find('img').fadeIn()
+                }, function() {
+                    $(this).find('img').fadeOut()
+                })
+                $('.dh_txt_btn').click(function() {
+                    $('#dh_txt').slideToggle()
+                    $(this).toggleClass('dh_btn');
+                })
+            })
+        </script>
+</body>
+
+</html>
