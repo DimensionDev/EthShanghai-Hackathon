@@ -53,7 +53,7 @@
   color: #fff;
   text-decoration: none;
   width: 100%;
-  background: rgba(0,0,0,0.85);
+  background:#42207f;
   border-bottom: 1px solid rgba(255,255,255,0.2);
   padding: 0.7em 1em;
   float: left;
@@ -123,11 +123,11 @@
 }
 .logo{z-index: 999;left:10px;position: absolute;top: 5px;}
 .logo img{height: 50px;}
-.top{background-color:#331467;position: fixed;width: 100%;top: 0;height:60px;z-index: 99999;}
-.language_toggle{position: fixed;right:60px;top:0;color: #999;z-index: 999999;line-height: 60px;font-size: 14px;}
-.language_toggle a{color: #fff;padding: 0 5px;}
+.top{background-color:#42207f;position: fixed;width: 100%;top: 0;height:100px;z-index: 99999;padding: 20px;}
+.top .container{ border:2px solid #fff;border-image: linear-gradient(to right,#30EAFC, #E978FA, #7567D9) 20 20;clip-path: inset(0 round 3px) ;}
+.top .container::before{content: "";position: absolute;}
 /*PC样式*/
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 40em) {
   .nav-collapse a {
     margin: 0;
     padding: 1em;
@@ -148,17 +148,15 @@
   .nav-collapse li {
   	display: inline-block;
     width:auto;
-    padding: 0 25px;
+    padding: 0 50px;
     position: relative;
   }
-  .nav-collapse li::before{content: " ";position: absolute;width:1px;height:20px;background: #fff;right: 0;top: 50%;margin-top: -10px;opacity: .3;}
+  /*.nav-collapse li::before{content: " ";position: absolute;width:1px;height:20px;background: #fff;right: 0;top: 50%;margin-top: -10px;opacity: .3;}*/
   .nav-collapse li:last-child::before{display: none;}
   .nav-collapse ul{text-align: right;}
-  .nav-collapse li a{background: none;border: none;color: #fff;padding: 0;line-height: 60px;font-size: 16px;padding: 0 5px;}
+  .nav-collapse li a{background: none;border: none;color: #fff;padding: 0;line-height: 60px;font-size:18px;padding: 0 5px;}
   .logo{left:15px;}
   .nav-collapse ul ul a {
     display: none;
   }
-  .language_toggle{right:10px;top:0;}
-
 }
