@@ -188,6 +188,10 @@ body::-webkit-scrollbar-thumb{display:block; width:8px; margin:0 auto; border-ra
 .bottom_logo img{height:60px;}
 .prizes_box{border-radius: 40px;border:2px solid #fff;line-height:140px;font-size: 50px;padding: 45px 10%;white-space:nowrap;box-sizing: border-box; }
 .guest{padding:50px;}
+
+.guestuser{background: #5829a1;border-radius: 10px;padding: 40px;margin-top: 20px;}
+.guestuser img{border-radius: 10px;margin-bottom: 20px; background-color: #fff; }
+
 .why_join li{background: #5829a1;border-radius: 10px;margin-top: 20px;}
 .why_join li:nth-child(1){background-image: linear-gradient(to right, rgba(42, 246, 255, 1) , rgba(108, 123, 222, 1));}
 .why_join li:nth-child(2){background-image: linear-gradient(to right, rgba(104, 129, 224, 1) , rgba(131, 79, 210, 1));}
@@ -196,23 +200,35 @@ body::-webkit-scrollbar-thumb{display:block; width:8px; margin:0 auto; border-ra
 .schedule_con p{margin: 20px 0;}
 .tip1 img{height:100px;position: absolute;top: -50px;right:-200px;display: none;}
 #dh_txt{display: none;}
-.dh_txt_btn img{height:20px;cursor: pointer;}
+.dh_txt_btn img{height:40px;cursor: pointer;}
 .dh_btn img{transform:rotate(180deg);}
+.os_img h6{margin: 20px 0;}
+.award_list li{margin-top: 30px;}
+.award_list li img{height:120px;padding: 10px 0;}
+.award_list li .bord_t{border-top-color: #000;font-size:20px;font-weight: bold;line-height: 24px;padding: 20px 0;}
+.al_con{padding:0 40px;border-radius: 10px;min-height: 215px;}
+.al_txt{padding:30px 0;min-height: 150px;}
 
 @media (max-width:640px) {
 /* .banner{height:440px;} */
 .b_txt1{font-size:50px; }
 /* .b_txt2{top: 160px;font-size:16px;} */
-.b_txt3{font-size:16px;line-height:24px;bottom:80px;}
+.b_txt3{font-size:16px;line-height:24px;bottom:50px;word-break:break-all;word-wrap:break-word;}
 .b_txt_banner {
     font-size: 20px;
     line-height: 30px;
 }
-/*.title{text-align: left;}*/
+.title{text-align: center;}
 .why_join{padding:0 15px;}
 .section-wrapper,.pt_80{padding-top: 40px;}
 .prizes_box{line-height:100px;font-size:40px;}
 .tip1 img{right:-80px;}
+.abouttxt {padding-bottom: 50px;}
+.al_con{padding: 0 10px ;}
+.al_txt{min-height: 180px;}
+.award_list li .img{height: 157px;}
+.award_list{padding: 0 15px;}
+.wap_text_center{text-align: center;}
 }
 
 @media (max-width:1200px) {
@@ -255,9 +271,6 @@ body::-webkit-scrollbar-thumb{display:block; width:8px; margin:0 auto; border-ra
     
 }
 @media (max-width:800px) {
-    #compar {
-        text-align: left;
-    }
     .comparitem {
         margin-top: 30px;
         width: 50%;
